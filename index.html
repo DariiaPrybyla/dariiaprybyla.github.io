@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <title>Traveler survey form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="title">Плануй свою наступну пригоду разом з нами!</h1>
+      <p id="description">Дякуємо, що допомагаєте нам вдосконалити ваш досвід подорожей. Ваша думка важлива!</p>
+    </header>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Ім'я<input id="name" type="text" name="name" placeholder="Як вас звати, мандрівнику?" required /></label>
+        <label id="email-label" for="email">Email <input id="email" type="email" name="email" placeholder="Куди ми можемо відправити ваші пригодницькі поради?" required /></label>
+        <label id="number-label"  for="age">Вік<input id="number" type="number" name="age" placeholder="Скільки років ви вже подорожуєте світом?" pattern="[0-9]" min="10" max="99"/></label>
+        <label for="dropdown">Ваша улюблена подорож:
+          <select id="dropdown" name="dropdown">
+            <option value=""></option>
+            <option value="1">Пляжна відпустка</option>
+            <option value="2">Гірські пригоди</option>
+            <option value="2">Екскурсії по містах</option>
+            <option value="2">Екзотичні країни</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <p>Що ви зазвичай берете в подорожі?</p>
+      <label for="camera"><input type="checkbox" id="camera" name="option1" value="camera" class="things"> Камера</label>
+      <label for="map"><input type="checkbox" id="map" name="option2" value="map" class="things"> Карта</label>
+      <label for="sunglasses"><input type="checkbox" id="sunglasses" name="option3" value="sunglasses" class="things"> Сонцезахисні окуляри</label>
+</fieldset>
+<fieldset>
+      <p>Як ви оцінюєте свій досвід подорожей?</p>
+      <label for="newcomer">
+    <input type="radio" id="newcomer" name="experience" value="newcomer" class="experience" />
+    Новачок
+  </label>
+  <label for="amateur">
+    <input type="radio" id="amateur" name="experience" value="amateur" class="experience" />
+    Мандрівник-любитель
+  </label>
+  <label for="professional">
+    <input type="radio" id="professional" name="experience" value="Professional" class="experience" />
+    Професійний турист
+  </label>
+      <textarea id="history" name="history" rows="3" cols="30" placeholder="Поділіться своєю найкращою мандрівницькою історією..."></textarea>
+      </fieldset>
+      <fieldset>
+        <p class="text-submit">Відправити свій відгук і отримати корисні поради!</p>
+      <input id="submit" type="submit" value="Відправити" />
+      </fieldset>
+    </form>
+  </body>
